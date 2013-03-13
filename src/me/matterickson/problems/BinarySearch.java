@@ -56,7 +56,7 @@ public class BinarySearch {
   
   private void find(TreeNode node, int findThisNumber) {
     m_findCounter++;
-    System.out.println("How deep down the rabit whole are we? [" + m_findCounter + "]");
+    System.out.println("How deep down the rabit hole are we? [" + m_findCounter + "]");
     if (node == null) {
       return;
     } else {
