@@ -6,14 +6,19 @@
  **/
 package me.matterickson;
 
+import java.util.Random;
+
 import me.matterickson.exception.BadInput;
 import me.matterickson.model.Node;
+import me.matterickson.problems.BinarySearch;
 import me.matterickson.problems.TreeLength;
 
 /**
  * @author Matt@MattErickson.ME
  */
 public class Run {
+  public static Random m_random = new Random();
+  
   public static void main(String[] args) {
     TreeLength treeAlg = new TreeLength(2);
     Node node = null;
@@ -28,6 +33,10 @@ public class Run {
         System.out.println(edgeNode); 
       }
     }
+    
+    System.out.println("Starting B-Search building and searching!");
+    BinarySearch bSearch = new BinarySearch();
+    bSearch.runSearch(m_random.nextInt(500));
     
   }
 }

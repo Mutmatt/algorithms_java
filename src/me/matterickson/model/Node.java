@@ -13,20 +13,19 @@ import java.util.List;
  * @author Matt@MattErickson.ME
  *
  */
-public class Node {
-  private int m_index;
-  private String m_value;
+public class Node extends GenericNode {
   private List<Node> m_edgeNodes = new ArrayList<Node>();
   
   public Node() {
+    super();
   }
   
   public Node(int index) {
-    setIndex(index);
+    super(index);
   }
-  
+
   public Node(String value) {
-    setValue(value);
+    super(value);
   }
   
   public Node(List<Node> nodes) {
@@ -44,38 +43,5 @@ public class Node {
   
   public List<Node> getEdges() {
     return m_edgeNodes;
-  }
-
-  /**
-   * @return the m_value
-   */
-  public String getValue() {
-    return m_value;
-  }
-
-  /**
-   * @param m_value the m_value to set
-   */
-  public void setValue(String m_value) {
-    this.m_value = m_value;
-  }
-  
-  @Override
-  public String toString() {
-    return m_value + " " + m_index;
-  }
-
-  /**
-   * @return the m_index
-   */
-  public int getIndex() {
-    return m_index;
-  }
-
-  /**
-   * @param m_index the m_index to set
-   */
-  public void setIndex(int m_index) {
-    this.m_index = m_index;
   }
 }
