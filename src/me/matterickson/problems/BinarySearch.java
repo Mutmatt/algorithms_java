@@ -40,14 +40,14 @@ public class BinarySearch {
         if (node.getLeft() != null) {
           setNewNode(node.getLeft(), newValue);
         } else {
-          System.out.println("Interting value [" + newValue + "] to the left of [" + node.getValue() + "]");
+          System.out.println("Inserting value [" + newValue + "] to the left of [" + node.getValue() + "]");
           node.setLeft(new TreeNode(newValue));
         }
       } else if (newValue > node.getValue()) {
         if (node.getRight() != null) {
           setNewNode(node.getRight(), newValue);
         } else {
-          System.out.println("Interting value [" + newValue + "] to the right of [" + node.getValue() + "]");
+          System.out.println("Inserting value [" + newValue + "] to the right of [" + node.getValue() + "]");
           node.setRight(new TreeNode(newValue));
         }
       }
@@ -56,7 +56,7 @@ public class BinarySearch {
   
   private void find(TreeNode node, int findThisNumber) {
     m_findCounter++;
-    System.out.println("How deep down the rabit hole are we? [" + m_findCounter + "]");
+    System.out.println("How deep down the rabbit hole are we? [" + m_findCounter + "]");
     if (node == null) {
       return;
     } else {
